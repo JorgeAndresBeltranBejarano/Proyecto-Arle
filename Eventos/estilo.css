@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* seccion header/nav */
+ul li a{
+    text-decoration: none;
+    color: #2d327d; 
+}
+a{
+    text-decoration: none;
+    display: flex;
+}
+ ul {
+    text-decoration: none;
+    list-style: none;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    width: 100%;
+    align-items: center;
+     border-style: solid;
+    border-width: 2px;
+    border-color: rgb(8, 8, 8);
+}
+.sectionNav h1{
+    background: linear-gradient( blue, rgb(65, 121, 242));
+    text-align: center;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.sectionNav p{
+    color: white;
+    font-size: 20px;
+}
+
+.sectionNav{
+    height: 200px;
+    margin-top: 60px;
+}
+
+body{
+   background: linear-gradient(to bottom, rgb(65, 121, 242)  , rgb(255, 255, 255) ) ;   
+   height: 100vh;
+  
+}
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 100px;
+} 
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+     border: black;
+    border-width: 2px;
+    border-style: solid;
+    height: 93%;
+}
+input{
+    height: 30px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+.espacio{
+    height: 100px; 
+    margin-top: 50px;
+}
+
+button{
+border:0;
+background-image: linear-gradient(
+ 150deg,
+ #9500,
+ #ffff,
+ #00DDFF
+    );
+border-radius: 8px;
+color:#020202;
+display: flex;
+font-size: 18px;
+justify-content: center;
+cursor: pointer;
+transition: .3s;
+margin-top: 20px;
+}
+
+button span{
+    background:linear-gradient(to bottom, rgb(65, 121, 242)  , rgb(255, 255, 255)) ;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+}
+button:hover span {
+    background: none;
+}
+button:active {
+    transform: scale(0,9)
+}
+input{
+    border: black;
+    border-style: solid;
+}
