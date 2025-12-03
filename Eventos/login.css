@@ -1,0 +1,72 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(65, 121, 242), white);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Título */
+h2{
+    color: #2d327d;
+    font-size: 32px;
+    margin-bottom: 25px;
+    background: linear-gradient(blue, rgb(65, 121, 242));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Formulario */
+#loginForm{
+    background: white;
+    padding: 35px 30px;
+    border-radius: 15px;
+    width: 330px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-left: 6px solid #2d327d;
+    text-align: center;
+}
+
+/* Inputs */
+#loginForm input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #2d327d;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#loginForm input:focus{
+    border-color: rgb(65, 121, 242);
+    box-shadow: 0 0 8px rgba(65,121,242,0.4);
+}
+
+/* Botón */
+#loginForm button{
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #2d327d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.2s ease;
+}
+
+#loginForm button:hover{
+    background-color: rgb(65, 121, 242);
+}
