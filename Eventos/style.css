@@ -16,6 +16,9 @@ a{
     text-decoration: none;
     list-style: none;
 }
+ul :hover{
+color: white;
+}
 nav{
     display: flex;
     justify-content: space-around;

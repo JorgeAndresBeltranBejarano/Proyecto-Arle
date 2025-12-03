@@ -66,6 +66,9 @@ main{
     border-style: solid;
     height: 93%;
 }
+ul :hover{
+color: white;
+}
 input{
     height: 30px;
     width: 300px;
