@@ -46,8 +46,9 @@ nav{
 }
 
 body{
-   background: linear-gradient(to bottom, rgb(65, 121, 242)  , rgb(255, 255, 255) ) ;   
-   height: 100vh;
+   background: linear-gradient(to bottom, rgb(65, 121, 242), white);
+   background-attachment: fixed; /* 🔥 evita que cambie al hacer scroll */
+   min-height: 100vh;
 }
 
 main{

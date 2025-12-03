@@ -1,30 +1,41 @@
+// funcionalidad.js
+// Maneja solo la creación/registro de eventos (guardar en localStorage)
 document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("btnGuardar");
+  const btn = document.getElementById("btnGuardar");
+  if (!btn) return;
 
-    btn.addEventListener("click", () => {
-        // Capturar datos
-        const evento = {
-            titulo: document.getElementById("titulo").value,
-            descripcion: document.getElementById("descripcion").value,
-            tipo: document.getElementById("tipo").value,
-            fecha: document.getElementById("fecha").value,
-            pais: document.getElementById("país").value,
-            ciudad: document.getElementById("ciudad").value,
-            lugar: document.getElementById("lugar").value
-        };
+  btn.addEventListener("click", () => {
+    const rol = localStorage.getItem("usuarioRol");
+    if (!rol) {
+      alert("Debes iniciar sesión para crear eventos.");
+      return;
+    }
 
-        // Leer eventos existentes en localStorage
-        let lista = JSON.parse(localStorage.getItem("eventos")) || [];
+    // Capturar datos (asegúrate que los ids coincidan con eventos.html)
+    const evento = {
+      titulo: document.getElementById("titulo").value.trim(),
+      descripcion: document.getElementById("descripcion").value.trim(),
+      tipo: document.getElementById("tipo").value.trim(),
+      fecha: document.getElementById("fecha").value.trim(),
+      pais: document.getElementById("pais").value.trim(),
+      ciudad: document.getElementById("ciudad").value.trim(),
+      lugar: document.getElementById("lugar").value.trim()
+    };
 
-        // Agregar nuevo evento
-        lista.push(evento);
+    // Validación básica
+    if (!evento.titulo) {
+      alert("El título es obligatorio.");
+      return;
+    }
 
-        // Guardar otra vez
-        localStorage.setItem("eventos", JSON.stringify(lista));
+    // Leer, agregar y guardar
+    const lista = JSON.parse(localStorage.getItem("eventos")) || [];
+    lista.push(evento);
+    localStorage.setItem("eventos", JSON.stringify(lista));
 
-        alert("Evento registrado con éxito");
+    alert("Evento registrado con éxito.");
 
-        // Opcional: limpiar campos
-        document.querySelectorAll("input").forEach(input => input.value = "");
-    });
+    // Limpiar inputs
+    document.querySelectorAll("input").forEach(i => i.value = "");
+  });
 });
